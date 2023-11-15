@@ -12,6 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -23,19 +25,19 @@
           </a>
         </p>
         <nav class="nav" role="navigation">
-          <ul>
+          <ul id="mainMenu">
             <li>
-              <a href="index.html">Titulinis</a>
+              <a href="#one" onclick="setActive(this);">Titulinis</a>
             </li>
-            <li><a href="#one">Apie Įmonę</a></li>
-            <li><a href="#two">Paslaugos</a></li>
-            <li><a href="#three">Kontaktai</a></li>
+            <li><a href="#two" onclick="setActive(this);">Apie Įmonę</a></li>
+            <li><a href="#three" onclick="setActive(this);">Paslaugos</a></li>
+            <li><a href="#four" onclick="setActive(this);">Kontaktai</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="block">
+      <div class="block" id="one">
         <div class="content container">
           <div class="m-s-paslaugos">MŪSŲ PASLAUGOS</div>
           <p class="teikiame-krovin">
@@ -50,10 +52,10 @@
           </p>
         </div>
       </div>
-      <div class="main-container" id="one">
+      <div class="main-container" id="two">
         <div class="content-2 container-2">
-          <div class="text-wrapper-4">
-            <img src="/img/line-5.svg" alt="" /> APIE TOMIRAS
+          <div class="sep">
+            <p class="text-wrapper-4">APIE TOMIRAS</p>
           </div>
           <div class="text-wrapper">Bendradarbiavimas sėkmei</div>
           <p class="p">
@@ -72,11 +74,11 @@
           <img src="/img/image-2.png" alt="" />
         </div>
       </div>
-      <div class="main-container-2 container" id="two">
+      <div class="main-container-2 container" id="three">
         <div class="cards">
           <div class="card">
-            <div class="text-wrapper-4">
-              <img src="./img/line-5.svg" alt="" />PASLAUGOS
+            <div class="sep">
+              <p class="text-wrapper-4">PASLAUGAS</p>
             </div>
             <div class="text-wrapper">Krovinių gabenimas</div>
             <p class="p">
@@ -99,11 +101,11 @@
           </div>
         </div>
       </div>
-      <div class="main-container-2 container" id="three">
+      <div class="main-container-2 container" id="four">
         <div class="cards">
           <div class="card">
-            <div class="text-wrapper-4">
-              <img src="./img/line-5.svg" alt="" />KAINOS PASIŪLYMAS
+            <div class="sep">
+              <p class="text-wrapper-4">KAINOS PASIŪLYMAS</p>
             </div>
             <div class="text-wrapper">Susisiekite su mumis</div>
             <p class="p">
@@ -152,8 +154,8 @@
     </main>
     <footer class="footer-container">
       <div class="contact container-2">
-        <div class="text-wrapper-4">
-          <img src="./img/line-5.svg" alt="" />KONTAKTAI
+        <div class="sep">
+          <p class="text-wrapper-4">KONTAKTAI</p>
         </div>
         <p class="text-wrapper-20">
           Pagrindinis ofisas ir sandėlys yra įsikūręs Kalvarijoje, Lietuvoje.

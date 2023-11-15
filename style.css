@@ -33,9 +33,30 @@ html {
   color: #ffffff;
   padding: 10px;
   font-size: 14px;
+
+  display: inline;
+  padding: 14px 16px;
+
+  position: relative;
 }
 .nav li {
   display: inline;
+}
+li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #337dde;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+li:hover a::after,
+li.active a::after {
+  width: 100%;
 }
 .block {
   margin-top: 100px;
@@ -202,6 +223,23 @@ textarea::placeholder {
   font-weight: 400;
   color: #c7c7c7;
   font-size: 16px;
+}
+
+.sep {
+  width: 100%;
+  display: flex;
+  color: #333;
+  align-items: center;
+  flex: 1;
+}
+
+.sep:before {
+  content: "";
+  height: 1px;
+  background: #337dde;
+  max-width: 25px;
+  margin-right: 10px;
+  flex: 1;
 }
 @media only screen and (min-width: 2000px) {
   .block {
