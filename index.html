@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tomiras</title>
+    <link
+      rel="icon"
+      type="images/x-icon"
+      href="img/favicon_io/favicon-32x32.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -14,6 +19,10 @@
     />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/eeadf355ae.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -115,10 +124,7 @@
               profesionaliai komandai.
             </p>
           </div>
-          <form
-            action="https://formsubmit.co/paulius.andrius@yahoo.com"
-            method="POST"
-          >
+          <form action="mail.php" method="POST">
             <div class="input-group-inline">
               <input
                 type="text"
@@ -136,7 +142,12 @@
               />
             </div>
             <div class="input-group-block">
-              <input type="text" name="aim" id="aim" placeholder="Tema" />
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Tema"
+              />
               <textarea
                 name="message"
                 id="message"
@@ -144,7 +155,7 @@
                 required
               ></textarea>
               <button type="submit" id="btn">
-                <img src="/img/group.png" alt="" />
+                <i class="fa-solid fa-paper-plane"></i>
                 <div>Siųsti</div>
               </button>
             </div>
